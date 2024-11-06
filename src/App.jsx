@@ -6,6 +6,9 @@ function App() {
 	{
 		alert("Open Terms & Conditions and click on I Agree.")
 	}
+	function handleChange()
+	{
+	}
 	return (
 		<>
 			<div id="wrapper">
@@ -22,7 +25,6 @@ function App() {
 					<form className="registration-form mb-3" method="post" action="" encType="multipart/form-data">
 
 					
-
 						<div className="card">
 							<div className="card-header">Personal Details</div>
 							<div className="card-body">
@@ -231,8 +233,6 @@ function App() {
 						</div> 
 
 
-					
-
 						<div className="card">
 							<div className="card-header">Course Details</div>
 							<div className="card-body">
@@ -240,8 +240,8 @@ function App() {
 								<div className="form-group row">
 									<label htmlFor="course" className="col-sm-2 col-form-label">Course</label>
 									<div className="col-sm-10 course-div">
-										<select className="custom-select" name="course" id="course" required>
-											<option selected="" disabled="" value="">Course you opted for</option>
+										<select className="custom-select" name="course" id="course">
+											<option defaultValue="">Course you opted for</option>
 <option value="advanced java">Advance Java</option>
 <option value="android">Android</option>
 <option value="computer basics">Computer Basics</option>
@@ -266,7 +266,7 @@ function App() {
 									<div className="col-sm-10 source">
 										<div className="form-check form-check-inline">
 											<label className="form-check-label mb-small" htmlFor="google">Google
-												<input className="form-check-input" type="radio" name="referral" id="google" value="google" checked required/>
+												<input className="form-check-input" type="radio" name="referral" id="google" value="google" checked onChange={handleChange}required/>
 												<span className="checkmark"></span>
 											</label>
 										</div>
@@ -320,7 +320,7 @@ function App() {
 						</div>
 
 					</form>
-					<div classNameName="modal" tabIndex="-1" id="exampleModal">
+					<div className="modal" tabIndex="-1" id="exampleModal">
 						<div className="modal-dialog">
 							<div className="modal-content">
 								<div className="modal-header">
