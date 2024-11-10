@@ -283,7 +283,21 @@ input[type=radio] ~ .checkmark {
   margin: 10px 0;
 }
 
-a
+.terms_condition a
 {
   text-decoration: none;
 }
+.terms_condition a:hover
+{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+

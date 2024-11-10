@@ -1,7 +1,36 @@
 import './App.css'
+import Modaldata from './Component/Modaldata';
+import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import InputGroup from "react-bootstrap/InputGroup";
+
 
 function App() {
 
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	  } = useForm();
+	
+	  const onSubmit = async (data) => {
+		// const response = await axios.post("http://localhost:8080/register", data);
+		// console.log(response);
+		console.log(data);
+	  };
+	
+
+	function Modaldata()
+	{
+		<Modaldata/>
+	}
 	function termsCondition()
 	{
 		alert("Open Terms & Conditions and click on I Agree.")
@@ -12,8 +41,8 @@ function App() {
 	return (
 		<>
 			<div id="wrapper">
-		<div className="container-fluid">
-			<div className="row">
+			<Container fluid>
+			<Row>
 				<div className="success-msg alert alert-success alert-dismissible fade hide" role="alert">
 					<strong>THANKS. Your registration is successful.</strong>
 					<button type="button" className="close" data-dismiss="alert" aria-label="Close">
@@ -21,46 +50,45 @@ function App() {
 					</button>
 				</div>
 
-				<div className="col-sm-12">
-					<form className="registration-form mb-3" method="post" action="" encType="multipart/form-data">
+				<Col sm={12}>
+				<Form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
 
-					
-						<div className="card">
-							<div className="card-header">Personal Details</div>
-							<div className="card-body">
+				<Card>
+				<Card.Header>Personal Details</Card.Header>
+				<Card.Body>
 
-								<div className="form-group row">
+				<Form.Group className="form-group row mb-3">
 									<label htmlFor="name" className="col-sm-2 col-form-label">Name</label>
 									<div className="col-sm-10">
 										<input type="text" className="form-control" id="name" name="name" placeholder="Enter your full name" autoFocus required/>
 										<small className="form-text text-danger" id="name-error"></small>
 									</div>
-								</div>
+								</Form.Group>
 
-								<div className="form-group row">
+								 <Form.Group className="form-group row mb-3">
 									<label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
 									<div className="col-sm-10">
 										<input type="email" className="form-control" id="email" name="email" placeholder="Enter your email address" required/>
 										<small className="form-text text-danger" id="email-error"></small>
 									</div>
-								</div>
+								</Form.Group>
 
-								<div className="form-group row">
+								 <Form.Group className="form-group row mb-3">
 									<label htmlFor="phone" className="col-sm-2 col-form-label">Phone</label>
 									<div className="col-sm-10">
 										<input type="text" className="form-control" id="phone" name="phone" placeholder="Enter your phone number" required/>
 										<small className="form-text text-danger" id="phone-error"></small>
 									</div>
-								</div>
-								<div className="form-group row">
+								</Form.Group>
+								 <Form.Group className="form-group row mb-3">
 									<label htmlFor="dob" className="col-sm-2 col-form-label">Date of Birth</label>
 									<div className="col-sm-10">
 										<input type="date" className="form-control" id="dob" name="dob" placeholder="Enter your Date of Birth" required/>
 										<small className="form-text text-danger" id="dob-error"></small>
 									</div>
-								</div>
+								</Form.Group>
 
-								<div className="form-group row">
+								<Form.Group className="form-group row mb-3">
 									<label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
 									<div className="col-sm-10">
 										<div className="form-check form-check-inline">
@@ -84,9 +112,9 @@ function App() {
 										</div>
 									</div>
 									<small className="form-text text-danger" id="gender-error"></small>
-								</div>
+								</Form.Group>
 
-								<div className="form-group row">
+								<Form.Group className="form-group row mb-3">
 									<label htmlFor="" className="col-sm-2 col-form-label">Aadhaar Card</label>
 									<div className="col-sm-10 row">
 										<div className="col-sm-6">
@@ -105,24 +133,26 @@ function App() {
 										<small className="form-text text-muted">Upload a .jpeg/.jpg/.png file of size not exceeding 1 MB.</small>
 										<small className="form-text text-danger" id="aadhar-error"></small>
 									</div>
-								</div>
+								</Form.Group>
 
-							</div>
-						</div>
+							</Card.Body>
+						</Card>
 
 
 
-						<div className="card">
-							<div className="card-header">Parent / Guardian Details</div>
-							<div className="card-body">
+						<Card>
+						<Card.Header>Parent / Guardian Details</Card.Header>
+						<Card.Body>
 
-								<div className="form-group row">
-									<label htmlFor="fname" className="col-sm-2 col-form-label">Parent / Guardian / Spouse Name</label>
+						<Form.Group className="form-group row mb-3">
+						<Form.Label className="col-sm-2 col-form-label">
+                    Parent / Guardian / Spouse Name
+                  </Form.Label>
 									<div className="col-sm-10">
 										<input type="text" className="form-control" id="fname" name="fname" placeholder="Enter your parent / guardian / spouse name" required/>
 										<small className="form-text text-danger" id="fname-error"></small>
 									</div>
-								</div>
+								</Form.Group>
 
 								<div className="form-group row">
 									<label htmlFor="fphone" className="col-sm-2 col-form-label">Parent / Guardian / Spouse Phone</label>
@@ -132,25 +162,25 @@ function App() {
 									</div>
 								</div>
 
-							</div> 
-						</div> 
+							</Card.Body> 
+						</Card> 
 
 
 						
 
-						<div className="card">
-							<div className="card-header">Residential Details</div>
-							<div className="card-body">
+						<Card>
+						<Card.Header>Residential Details</Card.Header>
+						<Card.Body>
 
-								<div className="form-group row">
+						<Form.Group className="form-group row mb-3">
 									<label htmlFor="laddress" className="col-sm-2 col-form-label">Local Address</label>
 									<div className="col-sm-10">
 										<textarea className="form-control" name="laddress" id="laddress" placeholder="Enter your local address (where you stay in Jaipur)" required></textarea>
 										<small className="form-text text-danger" id="address-error"></small>
 									</div>
-								</div>
+								</Form.Group>
 
-								<div className="form-group row">
+								<Form.Group className="form-group row">
 									<div className="offset-sm-2 col-sm-10">
 										<div className="form-check form-check-inline">
 											<label className="switch">
@@ -163,27 +193,25 @@ function App() {
 
 										</div>
 									</div>
-								</div>
+								</Form.Group>
 
-								<div className="form-group row">
+								<Form.Group className="form-group row">
 									<label htmlFor="paddress" className="col-sm-2 col-form-label">Permanent Address</label>
 									<div className="col-sm-10">
 										<textarea className="form-control" name="paddress" id="paddress" placeholder="Enter your permanent address (address of your hometown)" required></textarea>
 										<small className="form-text text-danger" id="paddress-error"></small>
 									</div>
-								</div>
+								</Form.Group>
 
-							</div> 
-						</div> 
+							</Card.Body> 
+						</Card> 
 
 
-					
+						<Card>
+							<Card.Header>Educational Details</Card.Header>
+							<Card.Body>
 
-						<div className="card">
-							<div className="card-header">Educational Details</div>
-							<div className="card-body">
-
-								<div className="form-group row">
+							<Form.Group className="form-group row mb-3">
 									<label htmlFor="areYoua" className="col-sm-2 col-form-label">Are You a?</label>
 									<div className="col-sm-10">
 										<div className="form-check form-check-inline">
@@ -199,17 +227,17 @@ function App() {
 											</label>
 										</div>
 									</div>
-								</div>
+								</Form.Group>
 								<div className="areyoua-div">
 									<div className="student-div">
-										<div className="form-group row">
+									<Form.Group className="form-group row">
 											<label htmlFor="qualification" className="col-sm-2 col-form-label">Last Attained Qualification</label>
 											<div className="col-sm-10">
 												<input className="form-control" type="text" name="qualification" id="qualification" placeholder="Your latest educational degree / diploma" required/>
 											</div>
-										</div>
+										</Form.Group>
 
-										<div className="form-group row">
+										<Form.Group className="form-group row">
 											<label htmlFor="qualificationYear" className="col-sm-2 col-form-label">Year</label>
 											<div className="col-sm-10">
 												<input className="form-control" type="text" name="qualificationYear" id="qualificationYear" placeholder="Completion Year" required/>
@@ -218,22 +246,22 @@ function App() {
 													Write 'Ongoing' if you are currently pursuing your degree
 												</small>
 											</div>
-										</div>
+										</Form.Group>
 
-										<div className="form-group row">
+										<Form.Group className="form-group row">
 											<label htmlFor="qualificationYear" className="col-sm-2 col-form-label">College / University</label>
 											<div className="col-sm-10">
 												<input className="form-control" type="text" name="college" id="college" placeholder="College / University" required/>
 											</div>
-										</div>
+										</Form.Group>
 									</div>
 								</div>
 
-							</div> 
-						</div> 
+							</Card.Body> 
+						</Card> 
 
 
-						<div className="card">
+						<Card>
 							<div className="card-header">Course Details</div>
 							<div className="card-body">
 
@@ -301,7 +329,7 @@ function App() {
 
 
 							</div> 
-						</div> 
+						</Card> 
 
 						<div className="col-sm-12">
 							<div className="form-check form-check-inline">
@@ -309,50 +337,22 @@ function App() {
 									<input type="checkbox" id="terms" value="terms" required disabled/>
 									<span className="slider round" onClick={termsCondition}></span>
 								</label>
-								<label className="form-check-label pl-2 text-muted" htmlFor="terms">By clicking submit, you agree to our <a href="" data-toggle="modal" data-target="#exampleModal">Terms & Conditions</a></label>
+								<label className="form-check-label pl-2 text-muted terms_condition" htmlFor="terms">By clicking submit, you agree to our <a href="" data-toggle="modal" data-target="#exampleModal" onClick={Modaldata}>Terms & Conditions</a></label>
 							<input className="form-check-input" type="checkbox" id="terms" value="terms" required/>
 								    <span className="checkmark"></span>
-
 							</div>
 						</div>
 						<div className="col-sm-12">
 							<input type="submit" name="register" className="btn btn-lg btn-primary btn-block" value="Register"/>
 						</div>
-
-					</form>
-					<div className="modal" tabIndex="-1" id="exampleModal">
-						<div className="modal-dialog">
-							<div className="modal-content">
-								<div className="modal-header">
-									<h5 className="modal-title">Term & Conditions</h5>
-									<button type="button" className="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div className="modal-body">
-									<h5>You agree to the following:</h5>
-									<ul>
-										<li>You have understood the course content.</li>
-										<li>You have understood the course duration.</li>
-										<li>You have cleared all your doubts regarding the course, the content and the duration and have no problem with it.</li>
-										<li>Fees once paid is not refundable.</li>
-										<li>In case of uninformed leave, I will not be eligible for a backup.</li>
-										<li>7 days or more of leaves without prior permission would result in the termination of my registration.</li>
-									</ul>
-								</div>
-								<div className="modal-footer">
-									<button type="button" className="btn btn-success" data-dismiss="modal" id="agreeButton">I agree</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+					</Form>
+					
+				</Col>
+			</Row>
+			</Container>
 	</div>
 
 		</>
 	)
 }
-
 export default App
