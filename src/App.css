@@ -10,12 +10,8 @@
   display:none;
 }
 
-/*input[type=submit] {
-  margin:20px;
-}*/
 .success{
-  /*position: absolute;
-  top: 20%;*/
+  
   background-color: rgba(0,0,0,.5);
   color: #ffffff;
   font-size: 50px;
@@ -29,10 +25,7 @@
   height: auto;
   width: 100%;
 }
-/*.form-text{
-  font-size: 100%;
-  font-weight: 900;
-}*/
+
 
 .checkRadio {
 display: block;
@@ -51,10 +44,10 @@ padding-left: 30px;
 }
 input[type=radio], input[type=checkbox] {
 position: absolute !important;
-opacity: 0;
+/* opacity: 0; */
 cursor: pointer;
-height: 0;
-width: 0;
+/* height: 0; */
+/* width: 0; */
 }
 .checkmark {
 position: absolute;
@@ -115,15 +108,6 @@ display: block;
   top: 5px;
   left: 14px;
 }
-/*
-input[type=radio] ~ .checkmark:after{
-  top: 8px;
-  left: 8px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #fff;
-}*/
 .form-control.is-invalid{
   border-width: 3px;
   box-shadow: inset 1px 1px 3px 3px rgba(0,0,0,0.2), 1px 1px 3px 3px rgba(0,0,0,0.3);
@@ -146,15 +130,9 @@ input[type=radio] ~ .checkmark:after{
 .card:last{
   margin-bottom: 20px;
 }
-
-
 .ui-widget-header .ui-icon{
 background-image: url(../images/ui-icons_444444_256x240.png);
 }
-
-/*.working-div, input[name=friendname], label[for=friendname]{
-  display: none;
-}*/
 
 .switch {
 position: relative;
@@ -283,21 +261,7 @@ input[type=radio] ~ .checkmark {
   margin: 10px 0;
 }
 
-.terms_condition a
+a
 {
   text-decoration: none;
 }
-.terms_condition a:hover
-{
-  text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-
