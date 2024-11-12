@@ -302,7 +302,7 @@ function App() {
                   <Card.Header>Residential Details</Card.Header>
                   <Card.Body>
 
-                    <Form.Group className="form-group row mb-3">
+                    <Form.Group className="form-group row mb-3 align-items-center">
 
                       <Form.Label className="col-sm-2 col-form-label">
                         Local Address
@@ -374,7 +374,7 @@ function App() {
                           />
 
 
-                          <Form.Label className="col-sm-2 col-form-label">
+                          <Form.Label className="col-form-label">
                             Permanent address is the same as local address
                           </Form.Label>
 
@@ -429,7 +429,7 @@ function App() {
                       </Form.Group>
 
                       {/* Conditionally Render Inputs Based on Role Selection */}
-                      {role === "student" && (
+                      { (
                         <>
                           <div className="form-group row">
 
