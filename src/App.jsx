@@ -84,80 +84,80 @@ function App() {
 			   <Card.Header>Personal Details</Card.Header>
 			   <Card.Body>
 			   <Form.Group className="form-group row mb-3">
-                      <label htmlFor="name" className="col-sm-2 col-form-label">
-                        Name
-                      </label>
+         <Form.Label className="col-sm-2 col-form-label">
+                    Name
+                  </Form.Label>
 					  <Col sm={10}>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="name"
-                          name="name"
-                          placeholder="Enter your full name"
-                          required
-                        />
+                       
+                <Form.Control type="text"  id="name"
+                          name="name" placeholder="Enter your full name" />
                       </Col>
 					  </Form.Group>
 
 					  <Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="email"
-                        className="col-sm-2 col-form-label"
-                      >
-                        Email
-                      </label>
+            <Form.Label className="col-sm-2 col-form-label">
+                    Email
+                  </Form.Label>
 					  <Col sm={10}>
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="email"
-                          name="email"
-                          placeholder="Enter your email address"
-                          required
-                        />
+                      
+
+<Form.Control type="email"  id="email"
+                          name="email" placeholder="Enter your email address" />
+
+
+
                       </Col>
 					  </Form.Group>
 
 					  <Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="phone"
-                        className="col-sm-2 col-form-label"
-                      >
-                        Phone
-                      </label>
+            <Form.Label className="col-sm-2 col-form-label">
+                    Phone
+                  </Form.Label>
                       <Col sm={10}>
-                        <input
+                        {/* <input
                           type="text"
                           className="form-control"
                           id="phone"
                           name="phone"
                           placeholder="Enter your phone number"
                           required
-                        />
+                        /> */}
+
+
+<Form.Control type="email"  id="phone"
+                             name="phone"
+                          placeholder="Enter your phone number"
+                          required  />
                       </Col>
 					  </Form.Group>
 
 					  <Form.Group className="form-group row mb-3">
-                      <label htmlFor="dob" className="col-sm-2 col-form-label">
-                        Date of Birth
-                      </label>
+                      <Form.Label className="col-sm-2 col-form-label">
+                      Date of Birth
+                  </Form.Label>
                       <Col sm={10}>
-                        <input
+                        {/* <input
                           type="date"
                           className="form-control"
                           id="dob"
                           name="dob"
                           required
-                        />
+                        /> */}
+
+
+              <Form.Control type="date"   id="dob"
+               name="dob" required  />
+
                       </Col>
 					  </Form.Group>
 					  <Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="gender"
-                        className="col-sm-2 col-form-label"
-                      >
-                        Gender
-                      </label>
+            <Form.Label className="col-sm-2 col-form-label">
+                    Gender
+                  </Form.Label>
+
+
+
+                      
 					  <Col sm={10}>
                         <div className="form-check form-check-inline">
                           <input
@@ -168,9 +168,18 @@ function App() {
                             value="male"
                             required
                           />
-                          <label className="form-check-label" htmlFor="male">
-                            Male
-                          </label>
+
+
+{/* <Form.Control type="radio"    className="form-check-input"   id="male"  value="male"
+               name="gender" required  /> */}
+
+
+
+                          <Form.Label className="form-check-label">
+                          Male
+                  </Form.Label>
+
+
                         </div>
                         <div className="form-check form-check-inline">
                           <input
@@ -181,9 +190,10 @@ function App() {
                             value="female"
                             required
                           />
-                          <label className="form-check-label" htmlFor="female">
-                            Female
-                          </label>
+                    
+                          <Form.Label className="form-check-label">
+                          Female
+                  </Form.Label>
                         </div>
                         <div className="form-check form-check-inline">
                           <input
@@ -194,38 +204,45 @@ function App() {
                             value="other"
                             required
                           />
-                          <label className="form-check-label" htmlFor="other">
-                            Other
-                          </label>
+                         <Form.Label className="form-check-label">
+                          Others
+                  </Form.Label>
                         </div>
                       </Col>
 					  </Form.Group>
 
 					  <Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="aadharFront"
-                        className="col-sm-2 col-form-label"
-                      >
-                        Aadhaar Card
-                      </label>
+            <Form.Label className="col-sm-2 col-form-label">
+                    Aadhaar Card
+                  </Form.Label>
                       <div className="col-sm-10 row">
                       <Col sm={6}>
-                          <input
+                          {/* <input
                             type="file"
                             className="form-control"
                             id="aadharFront"
                             name="aadharFront"
                             required
-                          />
+                          /> */}
+
+<Form.Control type="file"  className="form-control"  id="aadharFront"
+               name="aadharFront" required  />
+
+
+                          
                         </Col>
                         <Col sm={6}>
-                          <input
+                          {/* <input
                             type="file"
                             className="form-control"
                             id="aadharBack"
                             name="aadharBack"
                             required
-                          />
+                          /> */}
+
+
+              <Form.Control type="file"  className="form-control"  id="aadharBack"
+               name="aadharBack" required  />
                        </Col>
                       </div>
 					  </Form.Group>
@@ -236,40 +253,48 @@ function App() {
 				<Card.Header>Parent / Guardian Details</Card.Header>
 				<Card.Body>
 				<Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="fname"
-                        className="col-sm-2 col-form-label"
-                      >
-                        Parent / Guardian Name
-                      </label>
+        <Form.Label className="col-sm-2 col-form-label">
+                    Parent / Guardian / Spouse Name
+                  </Form.Label>
                       <Col sm={10}>
-                        <input
+                        {/* <input
                           type="text"
                           className="form-control"
                           id="fname"
                           name="fname"
                           placeholder="Enter your parent / guardian name"
                           required
-                        />
+                        /> */}
+
+
+            <Form.Control type="text"  className="form-control"  id="fname"
+               name="fname"  placeholder="Enter your parent / guardian name" required  />
+
+
                       </Col>
                     </Form.Group>
 
 					<Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="fphone"
-                        className="col-sm-2 col-form-label"
-                      >
-                        Parent / Guardian Phone
-                      </label>
+          <Form.Label className="col-sm-2 col-form-label">
+                    Parent / Guardian / Spouse Phone
+                  </Form.Label>
 					  <Col sm={10}>
-                        <input
+                        {/* <input
                           type="text"
                           className="form-control"
                           id="fphone"
                           name="fphone"
                           placeholder="Enter your parent / guardian phone number"
                           required
-                        />
+                        /> */}
+
+
+
+              <Form.Control type="text"  className="form-control"  id="fphone"
+               name="fphone"  placeholder="Enter your parent / guardian phone number" required  />
+
+                          
+
                       </Col>
                     </Form.Group>
                   </Card.Body>
@@ -280,7 +305,11 @@ function App() {
 				<Card.Body>
         
         <Form.Group className="form-group row mb-3">
-            <label htmlFor="laddress" className="col-sm-2 col-form-label">Local Address</label>
+           
+            <Form.Label className="col-sm-2 col-form-label">
+            Local Address
+                  </Form.Label>
+            
 			<Col sm={10}>
               <textarea
                 className="form-control"
@@ -295,7 +324,11 @@ function App() {
 			</Form.Group>
 
             <Form.Group className="form-group row mb-3">
-            <label htmlFor="paddress" className="col-sm-2 col-form-label">Permanent Address</label>
+
+            <Form.Label className="col-sm-2 col-form-label">
+            Permanent Address
+                  </Form.Label>
+
 			<Col sm={10}>
               <textarea
                 className="form-control"
@@ -320,9 +353,12 @@ function App() {
                   checked={isSameAddress}
                   onChange={handleCheckboxChange}  
                 />
-                <label className="form-check-label" htmlFor="sameAddress">
-                  Permanent address is the same as local address
-                </label>
+      
+
+                <Form.Label className="col-sm-2 col-form-label">
+                Permanent address is the same as local address
+                  </Form.Label>
+        
               </div>
             </div>
 			</Form.Group>
@@ -330,13 +366,16 @@ function App() {
                 </Card>
 
 				<Card>
-                  <div className="card">
-                    <div className="card-header">Educational Details</div>
-                    <div className="card-body">
-                      <div className="form-group row">
-                        <label className="col-sm-2 col-form-label">
-                          Are you a:
-                        </label>
+        <Card>
+                    
+                    <Card.Header>Educational Details</Card.Header>
+                    <Card.Body>
+                    <Form.Group className="form-group row mb-3">
+                        
+                      
+                        <Form.Label className="col-sm-2 col-form-label">
+                        Are you a:
+                  </Form.Label>
 						<Col sm={10}>
                           <div className="form-check form-check-inline">
                             <input
@@ -347,7 +386,10 @@ function App() {
                               checked={role === "student"}
                               onChange={handleRoleChange}
                             />
-                            <label className="form-check-label">Student</label>
+                           
+                            <Form.Label className="col-form-label">
+                            Student
+                  </Form.Label>
                           </div>
                           <div className="form-check form-check-inline">
                             <input
@@ -358,25 +400,27 @@ function App() {
                               checked={role === "workingProfessional"}
                               onChange={handleRoleChange}
                             />
-                            <label className="form-check-label">
-                              Working Professional
-                            </label>
+                            
+                            <Form.Label className="col-form-label">
+                            Working Professional
+                  </Form.Label>
+                            
                           </div>
                         </Col>
-                      </div>
+                      </Form.Group>
 
                       {/* Conditionally Render Inputs Based on Role Selection */}
                       {role === "student" && (
                         <>
                           <div className="form-group row">
-                            <label
-                              htmlFor="qualification"
-                              className="col-sm-2 col-form-label"
-                            >
-                              Qualification
-                            </label>
+                          
+                            <Form.Label className="col-sm-2 col-form-label">
+                            Qualification
+                  </Form.Label>
+
+                            
                             <div className="col-sm-10">
-                              <input
+                              {/* <input
                                 type="text"
                                 className="form-control"
                                 id="qualification"
@@ -386,19 +430,28 @@ function App() {
                                 }
                                 placeholder="Enter your qualification"
                                 required
-                              />
+                              /> */}
+
+
+<Form.Control type="text"  className="form-control"  id="qualification"
+          value={qualification}
+          onChange={(e) =>
+            setQualification(e.target.value)
+          }   placeholder="Enter your qualification" required  />                 
+
+
+
                             </div>
                           </div>
 
                           <div className="form-group row">
-                            <label
-                              htmlFor="completionYear"
-                              className="col-sm-2 col-form-label"
-                            >
-                              Completion Year
-                            </label>
+                             
+                            <Form.Label className="col-sm-2 col-form-label">
+                            Completion Year
+                  </Form.Label>
+
                             <div className="col-sm-10">
-                              <input
+                              {/* <input
                                 type="text"
                                 className="form-control"
                                 id="completionYear"
@@ -408,7 +461,15 @@ function App() {
                                 }
                                 placeholder="Enter your completion year"
                                 required
-                              />
+                              /> */}
+
+
+
+<Form.Control type="text"  className="form-control"  id="completionYear"
+          value={completionYear}
+          onChange={(e) =>
+            setCompletionYear(e.target.value)
+          }   placeholder="Enter your completion year" required  /> 
                             </div>
                           </div>
                         </>
@@ -417,14 +478,14 @@ function App() {
                       {role === "workingProfessional" && (
                         <>
                           <div className="form-group row">
-                            <label
-                              htmlFor="designation"
-                              className="col-sm-2 col-form-label"
-                            >
-                              Designation
-                            </label>
+                           
+                            <Form.Label className="col-sm-2 col-form-label">
+                            Designation
+                  </Form.Label>
+
+
                             <div className="col-sm-10">
-                              <input
+                              {/* <input
                                 type="text"
                                 className="form-control"
                                 id="designation"
@@ -432,19 +493,27 @@ function App() {
                                 onChange={(e) => setDesignation(e.target.value)}
                                 placeholder="Enter your designation"
                                 required
-                              />
+                              /> */}
+
+
+        <Form.Control type="text"  className="form-control"  id="designation"
+          value={designation}
+          onChange={(e) =>
+            setDesignation(e.target.value)
+          }   placeholder="Enter your designation" required  /> 
+
+
                             </div>
                           </div>
 
                           <div className="form-group row">
-                            <label
-                              htmlFor="company"
-                              className="col-sm-2 col-form-label"
-                            >
-                              Company
-                            </label>
+                          
+                            <Form.Label className="col-sm-2 col-form-label">
+                            Company
+                  </Form.Label>
+
 							<Col sm={10}>
-                              <input
+                              {/* <input
                                 type="text"
                                 className="form-control"
                                 id="company"
@@ -452,25 +521,34 @@ function App() {
                                 onChange={(e) => setCompany(e.target.value)}
                                 placeholder="Enter your company name"
                                 required
-                              />
+                              /> */}
+
+
+<Form.Control type="text"  className="form-control"  id="company"
+          value={company}
+          onChange={(e) =>
+            setCompany(e.target.value)
+          }   placeholder="Enter your company name" required  /> 
+
+
+
                             </Col>
                           </div>
                         </>
                       )}
-                    </div>
-                  </div>
+                    </Card.Body>
+                  </Card>
                 </Card>
 
 				<Card>
 				  <Card.Header>Course Details</Card.Header>
 				  <Card.Body>
                   <Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="course"
-                        className="col-sm-2 col-form-label"
-                      >
-                        Course
-                      </label>
+                     
+                      <Form.Label className="col-sm-2 col-form-label">
+                      Course
+                  </Form.Label>
+
 					  <Col sm={10}>
                         <select
                           className="form-control"
@@ -506,14 +584,14 @@ function App() {
                     </Form.Group>
                     {selectedCourse === "other" && (
                       <div className="form-group row">
-                        <label
-                          htmlFor="otherCourse"
-                          className="col-sm-2 col-form-label"
-                        >
-                          Enter your course
-                        </label>
+                       
+                        <Form.Label className="col-sm-2 col-form-label">
+                        Enter your course
+                  </Form.Label>
+
+
                         <Col sm={10}>
-                          <input
+                          {/* <input
                             type="text"
                             className="form-control"
                             id="otherCourse"
@@ -522,17 +600,27 @@ function App() {
                             value={otherCourse}
                             onChange={(e) => setOtherCourse(e.target.value)}
                             required
-                          />
+                          /> */}
+
+
+
+<Form.Control type="text"  className="form-control"  id="otherCourse" name='otherCourse'
+          value={otherCourse}
+          onChange={(e) =>
+            setOtherCourse(e.target.value)
+          }   placeholder="Enter the course name" required  /> 
+
                        </Col>
                       </div>
                     )}
          						<Form.Group className="form-group row mb-3">
-                      <label
-                        htmlFor="referral"
-                        className="col-sm-2 col-form-label"
-                      >
-                        How did you come to know about us?
-                      </label>
+                     
+                      <Form.Label className="col-sm-2 col-form-label">
+                      How did you come to know about us?
+                  </Form.Label>
+
+
+
 					  <Col sm={10}>
                         <div className="form-check form-check-inline">
                           <input
@@ -543,9 +631,13 @@ function App() {
                             value="Google"
                             required
                           />
-                          <label className="form-check-label" htmlFor="google">
-                            Google
-                          </label>
+                  
+                          <Form.Label className="form-label">
+                          Google
+                  </Form.Label>
+
+
+
                         </div>
                         <div className="form-check form-check-inline">
                           <input
@@ -556,12 +648,12 @@ function App() {
                             value="Facebook"
                             required
                           />
-                          <label
-                            className="form-check-label"
-                            htmlFor="facebook"
-                          >
-                            Facebook
-                          </label>
+                         
+                          <Form.Label className="form-label">
+                          Facebook
+                  </Form.Label>
+
+                          
                         </div>
                         <div className="form-check form-check-inline">
                           <input
@@ -572,12 +664,10 @@ function App() {
                             value="Instagram"
                             required
                           />
-                          <label
-                            className="form-check-label"
-                            htmlFor="instagram"
-                          >
-                            Instagram
-                          </label>
+                      
+                          <Form.Label className="form-label">
+                          Instagram
+                  </Form.Label>
                         </div>
                         <div className="form-check form-check-inline">
                           <input
@@ -588,12 +678,10 @@ function App() {
                             value="College TPO"
                             required
                           />
-                          <label
-                            className="form-check-label"
-                            htmlFor="collegeTPO"
-                          >
-                            College TPO
-                          </label>
+                        
+                          <Form.Label className="form-check-label">
+                          College TPO
+                  </Form.Label>
                         </div>
                         <div className="form-check form-check-inline">
                           <input
@@ -604,9 +692,11 @@ function App() {
                             value="Friend"
                             required
                           />
-                          <label className="form-check-label" htmlFor="friend">
-                            Friend
-                          </label>
+      
+
+                          <Form.Label className="form-check-label">
+                          Friend
+                  </Form.Label>
                         </div>
                       </Col>
                     </Form.Group>
@@ -623,7 +713,7 @@ function App() {
                           />
                           <span className="slider round"></span>
                         </label>
-                        <label
+                        {/* <label
                           className="form-check-label pl-2 text-muted"
                           htmlFor="terms"
                         >
@@ -634,16 +724,29 @@ function App() {
                           >
                             Terms & Conditions
                           </span>
-                        </label>
+                        </label> */}
+
+
+                    
+                        <Form.Label className="form-check-label pl-2 text-muted">
+                     By clicking submit, you agree to our {""}{" "}
+                          <span
+                            onClick={termsCondition}
+                            style={{ color: "blue", cursor: "pointer" }}
+                          >
+                            Terms & Conditions
+                          </span>
+                  </Form.Label>
+
+                        {/* <Form.Label className="col-sm-2 col-form-label">
+                    Phone
+                  </Form.Label> */}
                       </div>
                     </Col>
                     <Col sm={12}>
-                      <input
-                        type="submit"
-                        name="register"
-                        className="btn btn-lg btn-primary btn-block"
-                        value="Register"
-                      />
+                    <Button variant="primary" type="submit">
+              Register
+            </Button>
                     </Col>
                   </Card.Body>
                 </Card>
