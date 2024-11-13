@@ -409,6 +409,8 @@ function App() {
                             <Form.Label className="col-form-label">
                               Student
                             </Form.Label>
+                            
+                        
                           </div>
                           <div className="form-check form-check-inline">
                             <input
@@ -425,7 +427,8 @@ function App() {
                             </Form.Label>
 
                           </div>
-                        </Col>
+                          
+                        </Col>  
                       </Form.Group>
 
                       {/* Conditionally Render Inputs Based on Role Selection */}
@@ -439,19 +442,7 @@ function App() {
 
 
                             <div className="col-sm-10">
-                              {/* <input
-                                type="text"
-                                className="form-control"
-                                id="qualification"
-                                value={qualification}
-                                onChange={(e) =>
-                                  setQualification(e.target.value)
-                                }
-                                placeholder="Enter your qualification"
-                                required
-                              /> */}
-
-
+                           
                               <Form.Control type="text" className="form-control" id="qualification"
                                 value={qualification}
                                 onChange={(e) =>
@@ -459,39 +450,25 @@ function App() {
                                 } placeholder="Enter your qualification" required />
 
                             </div>
-                          </div>
-
-                          <div className="form-group row">
-
+                            
                             <Form.Label className="col-sm-2 col-form-label">
-                              Completion Year
+                            Last Attained Qualification
                             </Form.Label>
-
                             <div className="col-sm-10">
-                              {/* <input
-                                type="text"
-                                className="form-control"
-                                id="completionYear"
-                                value={completionYear}
+                           
+                              <Form.Control type="text" className="form-control" id="Last Attained Qualification"
+                                value={qualification}
                                 onChange={(e) =>
-                                  setCompletionYear(e.target.value)
-                                }
-                                placeholder="Enter your completion year"
-                                required
-                              /> */}
+                                  setQualification(e.target.value)
+                                } placeholder="Enter your Last Attained Qualification" required />
 
-
-
-                              <Form.Control type="text" className="form-control" id="completionYear"
-                                value={completionYear}
-                                onChange={(e) =>
-                                  setCompletionYear(e.target.value)
-                                } placeholder="Enter your completion year" required />
                             </div>
+
                           </div>
+
+        
                         </>
                       )}
-
                       {role === "workingProfessional" && (
                         <>
                           <div className="form-group row">
